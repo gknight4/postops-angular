@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>PostOps</span>
+    <span class="example-spacer"></span>
+    <button mat-button class = "mat-icon-button">
+    <mat-icon svgIcon="login"></mat-icon></button>
+    <mat-icon class="example-icon">delete</mat-icon>
+<mat-menu #appMenu="matMenu">
+<div style="width: 400px; height: 400px;">this is it
+  <button mat-menu-item>Settings</button>
+  <button mat-menu-item>Help</button>
+  </div>
+</mat-menu>
+
+<button mat-icon-button [matMenuTriggerFor]="appMenu">
+  <mat-icon>more_vert</mat-icon>
+</button>    
+  </mat-toolbar-row>
+</mat-toolbar>
