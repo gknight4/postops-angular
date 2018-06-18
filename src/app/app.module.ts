@@ -11,33 +11,48 @@ import { MatIconRegistry, MatIconModule } from '@angular/material'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { DemoComponent } from './demo/demo.component';
-import {MatMenuModule} from '@angular/material/menu';
+//import { DemoComponent } from './demo/demo.component';
+import { MatMenuModule } from '@angular/material/menu';
 import { MethodSelectComponent } from './method-select/method-select.component';
 import { UrlInputComponent } from './url-input/url-input.component';
-import { HeadersArrayComponent } from './headers-array/headers-array.component';
+//import { HeadersArrayComponent } from './headers-array/headers-array.component';
 import { BodyTypeSelectComponent } from './body-type-select/body-type-select.component';
-import { FormArrayComponent } from './form-array/form-array.component';
-import { JsonArrayComponent } from './json-array/json-array.component';
-import { ResponseStatusComponent } from './response-status/response-status.component';
-import { ResponseHeadersComponent } from './response-headers/response-headers.component';
-import { ResponseBodyComponent } from './response-body/response-body.component';
+//import { FormArrayComponent } from './form-array/form-array.component';
+//import { JsonArrayComponent } from './json-array/json-array.component';
+//import { ResponseStatusComponent } from './response-status/response-status.component';
+//import { ResponseHeadersComponent } from './response-headers/response-headers.component';
+//import { ResponseBodyComponent } from './response-body/response-body.component';
+import { PoComponent } from './po/po.component';
+import { OneAutocompleteComponent } from './one-autocomplete/one-autocomplete.component';
+//import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+//import { Rf2Component } from './rf2/rf2.component';
+import { OneHeaderComponent } from './one-header/one-header.component';
+import { DataService } from './data.service'
+import { HttpService } from './http.service'
+import { UtilService } from './util.service';
+import { RawBodyComponent } from './raw-body/raw-body.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DemoComponent,
+//    DemoComponent,
     MethodSelectComponent,
     UrlInputComponent,
-    HeadersArrayComponent,
+//    HeadersArrayComponent,
     BodyTypeSelectComponent,
-    FormArrayComponent,
-    JsonArrayComponent,
-    ResponseStatusComponent,
-    ResponseHeadersComponent,
-    ResponseBodyComponent
+//    FormArrayComponent,
+//    JsonArrayComponent,
+//    ResponseStatusComponent,
+//    ResponseHeadersComponent,
+//    ResponseBodyComponent,
+    PoComponent,
+    OneAutocompleteComponent,
+//    ReactiveFormComponent,
+//    Rf2Component,
+//    OneHeaderComponent,
+    RawBodyComponent
   ],
   imports: [
     BrowserModule,
@@ -55,10 +70,13 @@ import { ResponseBodyComponent } from './response-body/response-body.component';
     MatMenuModule
   ],
   exports: [
-    HeaderComponent,
-    DemoComponent
+//    HeaderComponent,
+//    DemoComponent
   ],
-  providers: [],
+  providers: [ 
+    DataService,
+    HttpService,
+    UtilService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

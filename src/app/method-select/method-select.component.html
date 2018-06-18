@@ -1,3 +1,12 @@
-<p>
-  method-select works!
-</p>
+<mat-form-field>
+  <mat-select placeholder="Method"
+    (selectionChange)="changeMethod($event.value)"
+    [value]="method"
+  >
+    <mat-option value="GET">GET</mat-option>
+    <mat-option value="POST">POST</mat-option>
+    <mat-option value="PUT">PUT</mat-option>    
+    <mat-option value="PATCH">PATCH</mat-option>    
+    <mat-option value="DELETE">DELETE</mat-option>    
+  </mat-select>
+</mat-form-field>

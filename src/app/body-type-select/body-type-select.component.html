@@ -1,3 +1,10 @@
-<p>
-  body-type-select works!
-</p>
+<mat-form-field>
+  <mat-select placeholder="Body Type"
+    (selectionChange)="setValue.emit($event.value)"
+    [value]="bodytype"
+  >
+    <mat-option value="Json">Json</mat-option>
+    <mat-option value="Form">Form</mat-option>
+    <mat-option value="Raw">Raw</mat-option>    
+  </mat-select>
+</mat-form-field>

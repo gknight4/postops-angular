@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-method-select',
@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class MethodSelectComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit() {
+  ngOnInit() { }
+  
+  @Input () method: string ;
+  @Output() setValue: EventEmitter<string> = new EventEmitter();
+  
+  private changeMethod(e){
+    this.setValue.emit(e);
   }
 
 }

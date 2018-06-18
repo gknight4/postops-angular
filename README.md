@@ -1,6 +1,18 @@
 This is the Angular frontend for PostOps
 
+ToDo
+
+implement Register / Login / Logout
+
 Changelog:
+
+Version 0.1.2
+
+implement toolbar
+implement method select
+implemented all of the form inputs
+implemented simple response display
+removed unused components
 
 Version 0.1.1
 
