@@ -1,0 +1,46 @@
+<div>
+<app-header></app-header>
+<app-method-select [method]="method" (setValue)="setMethod($event)"></app-method-select>
+<app-url-input [options]="urlSuggestions" [url]="url" (setValue)="setUrl($event)"></app-url-input>
+<h3>Headers</h3>
+<app-one-autocomplete 
+  *ngFor="let header of headersInit; let i = index" 
+  [options]="headerSuggestions"  
+  [value]="header" 
+  [index]="i"
+  (onBlur)="checkStrings($event, 'head')"
+  (setValue)="setHeader($event)"
+></app-one-autocomplete>
+<h3>Body</h3>
+<app-body-type-select [bodytype]="bodyType" (setValue)="setBodyType($event)"></app-body-type-select>
+<div *ngIf="bodyType == 'Json'">
+this is jsons
+  <app-one-autocomplete 
+    *ngFor="let json of jsonsInit; let i = index" 
+    [options]="jsonSuggestions"  
+    [value]="json" 
+    [index]="i"
+    (onBlur)="checkStrings($event, 'json')"
+    (setValue)="setJson($event)"
+  ></app-one-autocomplete>
+</div>
+<div *ngIf="bodyType == 'Form'">
+  <app-one-autocomplete 
+    *ngFor="let form of formsInit; let i = index" 
+    [options]="formSuggestions"  
+    [value]="form" 
+    [index]="i"
+    (onBlur)="checkStrings($event, 'form')"
+    (setValue)="setForm($event)"
+  ></app-one-autocomplete>
+</div>
+<app-raw-body *ngIf="bodyType == 'Raw'"></app-raw-body>
+<h2>Response</h2>
+{{respStatus}}
+<h3>Headers</h3>
+<div *ngFor="let header of respHeaders; let i = index" >
+{{header}}
+</div>
+<h3>Body</h3>
+{{respBody}}
+</div>

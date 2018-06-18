@@ -26,7 +26,7 @@ import { PoComponent } from './po/po.component';
 import { OneAutocompleteComponent } from './one-autocomplete/one-autocomplete.component';
 //import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 //import { Rf2Component } from './rf2/rf2.component';
-import { OneHeaderComponent } from './one-header/one-header.component';
+//import { OneHeaderComponent } from './one-header/one-header.component';
 import { DataService } from './data.service'
 import { HttpService } from './http.service'
 import { UtilService } from './util.service';

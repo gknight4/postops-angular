@@ -6,6 +6,10 @@ implement Register / Login / Logout
 
 Changelog:
 
+Version 0.1.3
+
+Really just adding / subtracting files from git commit
+
 Version 0.1.2
 
 implement toolbar

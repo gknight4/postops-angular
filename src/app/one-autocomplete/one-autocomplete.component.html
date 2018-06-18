@@ -1,0 +1,20 @@
+<form 
+  class="example-form" 
+  [formGroup]="autoCompForm">
+  <mat-form-field class="example-full-width">
+    <input 
+      type="text" 
+      placeholder={{placeholder}} 
+      aria-label="Number" 
+      matInput 
+      formControlName="autoCompInput"
+      [matAutocomplete]="auto"
+      (blur)="onBlur.emit()"
+    >
+    <mat-autocomplete #auto="matAutocomplete" >
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
